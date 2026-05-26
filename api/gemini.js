@@ -4,13 +4,19 @@ export default async function handler(req, res) {
   }
 
   const { password, system, user } = req.body;
+
   if (password !== process.env.APP_PASSWORD) {
     return res.status(401).json({ error: 'パスワードが違います' });
   }
 
+  const geminiKey = process.env.GEMINI_API_KEY;
+  if (!geminiKey) {
+    return res.status(500).json({ error: 'APIキーが設定されていません' });
+  }
+
   try {
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${process.env.GEMINI_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${geminiKey}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
