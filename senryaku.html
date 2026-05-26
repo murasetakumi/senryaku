@@ -711,6 +711,12 @@
         <input type="text" id="target" class="form-input" placeholder="例：1名（中途・新卒問わず）">
       </div>
 
+      <!-- Password -->
+      <div style="padding-top:4px; border-top:1px solid var(--dark-border);">
+        <label class="form-label">🔐 パスワード</label>
+        <input type="password" id="appPassword" class="form-input" placeholder="社内パスワードを入力">
+      </div>
+
       <!-- Generate button -->
       <button class="btn-generate" id="generateBtn" onclick="generateProposal()">
         ▶ 提案書を生成する
@@ -931,7 +937,7 @@ async function generateProposal() {
     strength: document.getElementById('strength').value.trim(),
     target: document.getElementById('target').value.trim(),
   };
-  const apiKey = 'AIzaSyAqVwpl3f8IpN1ydlsMLz4-XvZo5u9xFmM';
+  const password = document.getElementById('appPassword').value.trim();
 
   // Validation
   const missing = [];
@@ -941,6 +947,7 @@ async function generateProposal() {
   if (!data.challenge) missing.push('採用における現状の課題');
   if (!data.strength) missing.push('企業・社長の強み/人柄');
   if (!data.target) missing.push('採用目標人数');
+  if (!password) missing.push('パスワード');
 
   if (missing.length > 0) {
     showError(`以下の項目を入力してください：\n${missing.join('、')}`);
