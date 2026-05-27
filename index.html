@@ -7,7 +7,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -68,7 +68,7 @@
 
   /* Logo */
   .logo-mark {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Noto Serif JP', serif;
     font-size: 1.6rem;
     letter-spacing: 0.15em;
     font-weight: 300;
@@ -120,7 +120,7 @@
   .btn-generate {
     background: linear-gradient(135deg, #8B6914 0%, #C9A84C 50%, #E8C97A 100%);
     color: #0A0A0A;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 700;
     font-size: 1.1rem;
     letter-spacing: 0.2em;
     padding: 14px 28px;
@@ -170,7 +170,7 @@
     opacity: 0.5;
   }
   .empty-state-icon {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 700;
     font-size: 5rem;
     color: var(--dark-border);
     line-height: 1;
@@ -208,7 +208,7 @@
     50% { transform: scaleY(1.2); opacity: 1; }
   }
   .loading-text {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Noto Serif JP', serif;
     font-size: 1.1rem;
     color: var(--gold);
     letter-spacing: 0.15em;
@@ -244,14 +244,14 @@
     background: rgba(201,168,76,0.03);
   }
   .section-num {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 700;
     font-size: 2rem;
     color: var(--gold-dim);
     line-height: 1;
     min-width: 32px;
   }
   .section-title-en {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Noto Serif JP', serif;
     font-size: 0.7rem;
     color: var(--gold-dim);
     letter-spacing: 0.25em;
@@ -284,7 +284,7 @@
     left: 20px;
     background: var(--gold);
     color: #0A0A0A;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 700;
     font-size: 0.8rem;
     letter-spacing: 0.1em;
     padding: 2px 10px;
@@ -397,7 +397,7 @@
     background: rgba(255,255,255,0.02);
   }
   .video-tag {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 700;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     padding: 3px 10px;
@@ -458,7 +458,7 @@
   .phase-3::before { background: linear-gradient(90deg, #e05252, #f97316); }
 
   .phase-label {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 700;
     font-size: 0.7rem;
     letter-spacing: 0.15em;
     margin-bottom: 4px;
@@ -484,7 +484,7 @@
     letter-spacing: 0.15em;
   }
   .phase-metric-value {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Noto Serif JP', serif;
     font-size: 1.3rem;
     color: var(--text-primary);
     font-weight: 600;
@@ -510,7 +510,7 @@
   }
   .funnel-step:last-child { border-bottom: none; }
   .funnel-step-num {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 700;
     font-size: 1.1rem;
     color: var(--gold-dim);
     min-width: 24px;
@@ -527,7 +527,7 @@
     color: #888;
   }
   .funnel-step-num-value {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Noto Serif JP', serif;
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--gold);
@@ -593,7 +593,7 @@
     padding-bottom: 20px;
   }
   .output-client-name {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 700;
     font-size: 2.2rem;
     letter-spacing: 0.05em;
     color: var(--text-primary);
@@ -623,6 +623,66 @@
   .section-card:nth-child(3) { animation-delay: 0.25s; }
   .section-card:nth-child(4) { animation-delay: 0.35s; }
   .section-card:nth-child(5) { animation-delay: 0.45s; }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .left-panel {
+      width: 100% !important;
+      height: auto !important;
+      position: relative !important;
+      top: 0 !important;
+    }
+    .flex {
+      flex-direction: column !important;
+    }
+    .right-panel {
+      height: auto !important;
+    }
+    .phase-cards {
+      grid-template-columns: 1fr !important;
+    }
+    .hearing-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .merit-demerit {
+      grid-template-columns: 1fr !important;
+    }
+    .challenge-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .output-client-name {
+      font-size: 1.4rem !important;
+    }
+  }
+
+  /* PDF button */
+  .btn-pdf {
+    background: transparent;
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 2px;
+    margin-top: 8px;
+    width: 100%;
+  }
+  .btn-pdf:hover {
+    background: rgba(201,168,76,0.1);
+    border-color: var(--gold);
+  }
+
+  /* Print styles */
+  @media print {
+    .left-panel, .site-header, .btn-pdf { display: none !important; }
+    .right-panel { height: auto !important; overflow: visible !important; }
+    body { background: white !important; color: black !important; }
+    .section-card { border: 1px solid #ccc !important; background: white !important; }
+  }
 
   /* Print style guide badge */
   .logline-badge {
@@ -658,7 +718,7 @@
   </div>
   <div class="text-right">
     <div style="font-size:0.62rem; letter-spacing:0.2em; color:var(--text-muted); text-transform:uppercase;">株式会社Logline</div>
-    <div style="font-size:0.6rem; color:#333; letter-spacing:0.1em;">Internal Tool v4.0</div>
+    <div style="font-size:0.6rem; color:#333; letter-spacing:0.1em;">Internal Tool v5.0</div>
   </div>
 </header>
 
@@ -720,6 +780,9 @@
       <!-- Generate button -->
       <button class="btn-generate" id="generateBtn" onclick="generateProposal()">
         ▶ 提案書を生成する
+      </button>
+      <button class="btn-pdf" id="pdfBtn" onclick="downloadPDF()" style="display:none;">
+        ↓ PDFで書き出す
       </button>
 
     </div>
@@ -1024,6 +1087,7 @@ function renderProposal(inputData, d) {
   document.getElementById('loadingState').style.display = 'none';
   const out = document.getElementById('outputContent');
   out.style.display = 'block';
+  showPDFButton();
 
   const now = new Date();
   const dateStr = `${now.getFullYear()}.${String(now.getMonth()+1).padStart(2,'0')}.${String(now.getDate()).padStart(2,'0')}`;
@@ -1269,6 +1333,16 @@ function showError(msg) {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Enter' && e.ctrlKey) generateProposal();
 });
+
+// Show PDF button after generation
+function showPDFButton() {
+  document.getElementById('pdfBtn').style.display = 'block';
+}
+
+// PDF download
+function downloadPDF() {
+  window.print();
+}
 </script>
 </body>
 </html>
