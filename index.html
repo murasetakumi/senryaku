@@ -793,19 +793,19 @@
       <!-- 集客モード専用（デフォルト非表示） -->
       <div class="marketing-field" style="display:none;">
         <label class="form-label">04M — ターゲット顧客層</label>
-        <textarea id="targetCustomer" class="form-input" placeholder="例：30〜50代の経営者、リフォームを検討中の戸建てオーナー"></textarea>
+        <textarea id="targetCustomer" class="form-input" placeholder="例：20〜40代のカフェ好き・在宅ワーカー、名古屋市内でスペシャルティコーヒーを探している人"></textarea>
       </div>
       <div class="marketing-field" style="display:none;">
         <label class="form-label">05M — 現状の集客課題</label>
-        <textarea id="marketingChallenge" class="form-input" placeholder="例：HPはあるが問い合わせが月1〜2件、SNSは未活用"></textarea>
+        <textarea id="marketingChallenge" class="form-input" placeholder="例：Instagramはあるが投稿が少なく、新規のお客様がなかなか来店してくれない"></textarea>
       </div>
       <div class="marketing-field" style="display:none;">
         <label class="form-label">06M — 商品・サービスの強み</label>
-        <textarea id="serviceStrength" class="form-input" placeholder="例：施工事例が豊富、アフターフォローが手厚い、地域密着20年"></textarea>
+        <textarea id="serviceStrength" class="form-input" placeholder="例：自家焙煎・スペシャルティコーヒー専門、店主がエチオピア農園まで豆を仕入れに行く、落ち着いた空間でテレワークにも最適"></textarea>
       </div>
       <div class="marketing-field" style="display:none;">
         <label class="form-label">07M — 月間集客目標</label>
-        <input type="text" id="marketingTarget" class="form-input" placeholder="例：月間問い合わせ10件、LINE登録50件">
+        <input type="text" id="marketingTarget" class="form-input" placeholder="例：月間来店数を30名増やす、Instagramフォロワー1,000人達成、テイクアウト注文を月50件">
       </div>
 
       <!-- Password -->
@@ -1412,6 +1412,14 @@ function setMode(mode) {
     title.textContent = '採用戦略設計ヒアリング';
     subtitle.textContent = 'クライアントの情報を入力し、Logline独自の採用SNS戦略を自動設計します';
     document.getElementById('generateBtn').textContent = '▶ 採用戦略を設計する';
+    document.getElementById('companyName').placeholder = '例：株式会社Logline';
+    document.getElementById('area').placeholder = '例：愛知県名古屋市・東海エリア';
+    document.getElementById('industry').placeholder = '例：映像制作・SNSマーケティング';
+    document.getElementById('challenge').placeholder = '例：映像・SNS業界の認知度が低く、優秀なクリエイターに出会えていない';
+    document.getElementById('strength').placeholder = '例：スノボーやサウナが好き、人情を大切にする、熱量が高い、本音で話す';
+    document.querySelector('label[for="challenge"], .form-label + textarea#challenge')?.previousElementSibling?.nodeType;
+    document.querySelectorAll('.form-label')[3].textContent = '04 — 採用における現状の課題';
+    document.querySelectorAll('.form-label')[4].textContent = '05 — 企業・社長の強み / 人柄';
   } else {
     recruitmentFields.forEach(el => el.style.display = 'none');
     marketingFields.forEach(el => el.style.display = 'block');
@@ -1424,6 +1432,13 @@ function setMode(mode) {
     title.textContent = '集客戦略設計ヒアリング';
     subtitle.textContent = 'クライアントの情報を入力し、Logline独自の集客SNS戦略を自動設計します';
     document.getElementById('generateBtn').textContent = '▶ 集客戦略を設計する';
+    document.getElementById('companyName').placeholder = '例：Logline Coffee（ログラインコーヒー）';
+    document.getElementById('area').placeholder = '例：愛知県名古屋市千種区・覚王山エリア';
+    document.getElementById('industry').placeholder = '例：カフェ・自家焙煎コーヒー専門店';
+    document.getElementById('challenge').placeholder = '例：SNSはあるが更新が少なく、新規来店につながっていない';
+    document.getElementById('strength').placeholder = '例：店主がエチオピアまで豆を仕入れに行く、落ち着いた空間、テレワーカーにも人気';
+    document.querySelectorAll('.form-label')[3].textContent = '04 — 現状の集客課題';
+    document.querySelectorAll('.form-label')[4].textContent = '05 — お店・オーナーの強み / 雰囲気';
   }
 
   // Reset output
