@@ -739,9 +739,18 @@
 
     <!-- Panel title -->
     <div class="mb-6">
-      <div style="font-family:'Cormorant Garamond',serif; font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:6px;">Client Hearing Form</div>
-      <div style="font-size:1.1rem; font-weight:700; color:var(--text-primary);">ヒアリング入力</div>
-      <div style="font-size:0.72rem; color:var(--text-muted); margin-top:4px; line-height:1.6;">クライアント情報を入力して提案書を自動生成します</div>
+      <div style="font-family:'Noto Serif JP', serif; font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:6px;">Logline Strategy Simulator</div>
+      <div style="font-size:1.1rem; font-weight:700; color:var(--text-primary);" id="formTitle">戦略設計ヒアリング</div>
+      <div style="font-size:0.72rem; color:var(--text-muted); margin-top:4px; line-height:1.6;" id="formSubtitle">クライアントの情報を入力し、Logline独自の戦略を自動設計します</div>
+    </div>
+
+    <!-- Mode selector -->
+    <div style="display:flex; gap:8px; margin-bottom:20px;">
+      <button onclick="setMode('recruitment')" id="btn-recruitment" style="flex:1; padding:12px 8px; border-radius:3px; border:1px solid var(--gold); background:rgba(201,168,76,0.15); color:var(--gold); font-family:'Noto Sans JP',sans-serif; font-size:0.8rem; font-weight:700; cursor:pointer; transition:all 0.2s; letter-spacing:0.05em;">👥 採用SNS戦略</button>
+      <button onclick="setMode('marketing')" id="btn-marketing" style="flex:1; padding:12px 8px; border-radius:3px; border:1px solid var(--dark-border); background:transparent; color:var(--text-muted); font-family:'Noto Sans JP',sans-serif; font-size:0.8rem; font-weight:700; cursor:pointer; transition:all 0.2s; letter-spacing:0.05em;">📢 集客SNS戦略</button>
+    </div>
+
+    <div style="display:none">
     </div>
 
     <!-- Divider -->
